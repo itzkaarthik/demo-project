@@ -14,11 +14,12 @@ public class TestData implements CommandLineRunner{
 	public void run(String... arg0) throws Exception {
 		DataRepository<Batch> batchRepo = new DataRepositoryImpl<Batch>();
 		Query q  = new Query();
-		q.addCriteria(Criteria.where("clientId").is("1234"));
+		q.addCriteria(Criteria.where("clientId").is("Kaarthikeyan"));
 		System.out.println(batchRepo.findById("59ee24757cd4d403b405db8e", Batch.class));
 		Batch b = new Batch();
 		b.setClientId("Kaarthikeyan");
-		//batchRepo.
+		batchRepo.add(b, Batch.class);
+		System.out.println(batchRepo.delete(q, Batch.class));
 	}
 	
 	public static void main(String[] args) {
