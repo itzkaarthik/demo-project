@@ -9,6 +9,7 @@
 	<modules>
 		<module>data-access</module>
 		<module>automation_model</module>
+		<module>ingestion_engine</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
